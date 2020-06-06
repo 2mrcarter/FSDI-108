@@ -1,0 +1,36 @@
+<h2>List of users in the System</h2>
+There are: {{ allUsers.length }}
+
+<!--<div *ngFor="let user of allUsers">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3imQDHz6YNZxdES69rlBFXUSDFMf6pimzyrMG3btt4RlFUSHo&usqp=CAU">
+    <h6>{{user.firstName}} {{user.lastName}}</h6>
+    <hr>
+    <label>Phone Number: {{user.phoneNumber}}</label>
+    <label>Marital Status: {{user.maritalStatus}}</label>
+
+</div>-->
+
+<div *ngIf="allUsers.length < 1" class=""> <div class="alert alert-danger">
+        <h6>Please create users on the Register Page</h6>
+    </div>
+</div>
+
+<table *ngIf ="allUsers.length > 0" class="table table-bordered table-stripped">
+    <thead class="thead-dark">
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+</table>
+
+    <tbody>
+        <tr *ngFor ="let user of allUsers">
+            <td>{{user.userName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+        </tr>
+    </tbody>

@@ -1,0 +1,28 @@
+.converterStyles{
+    border: 10px solid;
+    border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;
+    color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(133, 223, 108);
+    background-image: url("https://a.rgbimg.com/users/x/xy/xymonau/600/o99AOTo.jpg");;
+    background-size: cover;
+    width: auto;
+    margin-top: 30px;
+    
+}
+
+.inputC{
+    background-color: rgb(212, 222, 238);
+    color: black;
+    border-radius: 40px;
+}
+.inputF{
+    background-color: rgb(238, 215, 215);
+    color: black;
+    border-radius: 40px;
+}
+.converterTitleFont{
+    font-family: fantasy;
+    font-size: 3rem;
+}

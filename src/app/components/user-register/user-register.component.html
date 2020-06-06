@@ -1,0 +1,81 @@
+<img src="https://lh3.googleusercontent.com/proxy/PszzdK82pt53L04N5cZ4hBOTGXfWesSBaqpF_aqv3gQU9YPD_uxsqs0ClOj4uolTclPRtDDNJYKkF-jxsF0BCXhb0UxLxRB4jjt8TWU5WG-Dv5WzFAVEp6bSynnz" alt="join">
+<div class="container-md">
+<form>
+    <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" [(ngModel)]="model.firstName" name="firstName" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" [(ngModel)]="model.lastName" name="lastName" placeholder="Last name">
+        </div>
+      </div>
+    <div class="form-group">
+      
+      <input type="tel" class="form-control" [(ngModel)]="model.phoneNumber" name="phoneNumber" aria-describedby="phoneHelp" placeholder="Phone number without space or dashes (-) or periods(.)">
+    </div>
+    
+    
+    <section>Marital Status:
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.maritalStatus" name="maritalStatus"value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Single</label>
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.maritalStatus" name="maritalStatus" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Married</label>
+      </div>
+    </section>  
+    <section>
+        Age:
+    
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">18-29</label>
+     
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">30-39</label>
+      
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option3" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">40-49</label>
+      
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option4" disabled>
+        <label class="form-check-label" for="inlineCheckbox4">50+</label>
+      </div>
+    </section>
+<br>
+    <section >
+        <div class="form-group">
+          <label for="exampleDropdownFormEmail2">E-mail address</label>
+          <input type="email" class="form-control" [(ngModel)]="model.email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword2">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="model.password" name="userpassword" placeholder="Password">
+          <input type="password" class="form-control" [(ngModel)]="model.retypeUserPassword" name="retypeuserpassword" placeholder="Confirm password">
+        </div>
+        <div *ngIf="model.password && retypePassword && model.password != retypePassword" class="alert alert-danger">
+          Passwords do not match. Please try again. 
+        </div>
+
+
+        
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+            <label class="form-check-label" for="dropdownCheck2">
+              Remember me
+            </label>
+          </div>
+        </div>
+        <button  [disabled]="!isDataCorrect()" (click)= "save()" name="submit" class="btn btn-primary">Sign Up!</button>
+    </section>
+
+    <div *ngIf="alertVisible" class="alert alert-success">
+      User Saved!!
+    </div>
+          
+</form>
+
+</div>
+
+
+
+

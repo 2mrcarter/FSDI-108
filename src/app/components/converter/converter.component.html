@@ -1,0 +1,10 @@
+<div class="converterStyles">
+    <p class="converterTitleFont">Temperature Converter</p>
+
+    Farenheit: <input type="number" class="inputF"[(ngModel)]="farenheit" name="fTemp" (ngModelChange)="convertToC()">
+    
+    Celcius: <input type="number" class="inputC" [(ngModel)]="celcius" name="cTemp" (ngModelChange)="convertToF()">
+    <br>
+<!--  <button (click)="convertToC()" class="buttonC">Convert to C</button>  -->   
+<!-- <button (click)="convertToF()" class="buttonF">Convert to F</button> -->   
+</div>
