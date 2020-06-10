@@ -10,5 +10,5 @@ export class User {
     lastName: string;
     phoneNumber: number;
     maritalStatus: boolean;
-    age: boolean;
+    age: number;
 }

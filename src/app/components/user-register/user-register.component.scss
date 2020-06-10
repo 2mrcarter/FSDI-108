@@ -1,19 +1,28 @@
+.containAll{
+    padding: 20px;
+    border: 5px green solid;
+    background-color: rgb(237, 247, 237);
+    border-radius: 20px;
+}
 
+img{
+    border: 5px rgb(163, 233, 149) solid;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 .container-md{
-   border: 15px green solid;
+   border: 5px rgb(163, 233, 149) solid;
     box-shadow: 5px 10px #a4d596;
     border-radius: 40px;
     padding: 15px;
-   background-size: cover;
     margin-top: 25px;
+    margin-bottom: 15px;
+
 }
-img{
-    border-radius: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    width: 30%
-}
+
 .form-check-input{
     padding-right: 10px;
 }

@@ -1,4 +1,5 @@
-<img src="https://lh3.googleusercontent.com/proxy/PszzdK82pt53L04N5cZ4hBOTGXfWesSBaqpF_aqv3gQU9YPD_uxsqs0ClOj4uolTclPRtDDNJYKkF-jxsF0BCXhb0UxLxRB4jjt8TWU5WG-Dv5WzFAVEp6bSynnz" alt="join">
+<div class="containAll">
+<img src="assets/img/registration-banner.png" alt="register">
 <div class="container-md">
 <form>
     <div class="row">
@@ -17,27 +18,17 @@
     
     <section>Marital Status:
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.maritalStatus" name="maritalStatus"value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">Single</label>
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.maritalStatus" name="maritalStatus" value="option2">
+
+        <input class="form-check-input" type="checkbox" [(ngModel)]="model.maritalStatus" name="maritalMarriedStatus" value="option2">
         <label class="form-check-label" for="inlineCheckbox2">Married</label>
       </div>
     </section>  
     <section>
         Age:
-    
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">18-29</label>
+        <input class="form-check-input" type="string" [(ngModel)]="model.age" name="userAge" value="agey">
+        <label class="form-check-label" for="inlineCheckbox1"></label>
      
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">30-39</label>
-      
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">40-49</label>
-      
-        <input class="form-check-input" type="checkbox" [(ngModel)]="model.age" name="userAge" value="option4" disabled>
-        <label class="form-check-label" for="inlineCheckbox4">50+</label>
       </div>
     </section>
 <br>
@@ -58,15 +49,12 @@
 
         
         <div class="form-group">
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-            <label class="form-check-label" for="dropdownCheck2">
-              Remember me
-            </label>
-          </div>
-        </div>
+         
         <button  [disabled]="!isDataCorrect()" (click)= "save()" name="submit" class="btn btn-primary">Sign Up!</button>
-    </section>
+      
+        </div>
+        
+        </section>
 
     <div *ngIf="alertVisible" class="alert alert-success">
       User Saved!!
@@ -75,7 +63,7 @@
 </form>
 
 </div>
-
+</div>
 
 
 

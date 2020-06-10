@@ -3,8 +3,8 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -16,18 +16,19 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/contact">Contact me</a>
       </li>
-      
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Login/Register
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="/user/login">Login</a>
-          <a class="dropdown-item" routerLink="/user/register">Register</a>
-          <a class="dropdown-item" routerLink="/user/list">User List</a>
-        </div>
+    
+      <li class="nav-item">
+        <a  *ngIf="!shared.isUserLoggedIn" class="nav-link" name="noLogIn" routerLink="/login">Log in</a>
+        </li>
+        
+      <li class="nav-item">
+        <a *ngIf="shared.isUserLoggedIn" class="nav-link" name="goLogIn" routerLink="/user/register">Register</a>
       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/user/list">User List</a>
+      </li>
+     
     </ul>
   </div>
 </nav>

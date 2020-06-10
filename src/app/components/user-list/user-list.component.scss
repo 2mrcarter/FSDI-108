@@ -1,0 +1,17 @@
+.container{
+    background-color: green($color: #93eb87);
+    border: 10px green solid;
+    box-shadow: 5px 10px rgb(216, 243, 221);
+    border-radius: 25px;
+    text-align: center;
+}
+img{
+    border: 5px rgb(163, 233, 149) solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px rgb(216, 243, 221);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}

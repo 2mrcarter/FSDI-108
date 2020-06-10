@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'converter', component: ConverterComponent},
   { path: 'user/register', component: UserRegisterComponent},
   { path: 'user/list', component: UserListComponent},
-  { path: 'user/login', component: UserLoginComponent}
+  { path: 'login', component: UserLoginComponent}
 
 ];
 

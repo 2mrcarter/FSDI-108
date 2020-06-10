@@ -18,6 +18,7 @@ export class UserRegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
+  console.log('user register ngOnInit');
   }
 
   isDataCorrect(){
